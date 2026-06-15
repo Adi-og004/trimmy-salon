@@ -12,7 +12,7 @@ export default function Footer() {
               style={{ fontFamily: "var(--font-serif)" }}
             >
               <span className="text-gold">T</span>
-              <span className="text-white">rimmy&apos;s</span>
+              <span className="text-foreground">rimmy&apos;s</span>
             </h3>
             <p className="text-sm text-muted leading-relaxed max-w-xs">
               The finest luxury unisex salon in Bhiwadi. Where artistry meets
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted hover:text-white transition-colors duration-300"
+                    className="text-sm text-muted hover:text-foreground transition-colors duration-300"
                   >
                     {link.label}
                   </a>

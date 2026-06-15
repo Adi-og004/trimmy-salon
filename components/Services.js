@@ -135,7 +135,7 @@ export default function Services() {
               className={`relative px-8 sm:px-12 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-400 ${
                 activeTab === "her"
                   ? "bg-crimson text-white shadow-[0_4px_20px_rgba(154,42,42,0.4)]"
-                  : "text-muted hover:text-white"
+                  : "text-muted hover:text-foreground"
               }`}
             >
               For Her
@@ -146,7 +146,7 @@ export default function Services() {
               className={`relative px-8 sm:px-12 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-400 ${
                 activeTab === "him"
                   ? "bg-crimson text-white shadow-[0_4px_20px_rgba(154,42,42,0.4)]"
-                  : "text-muted hover:text-white"
+                  : "text-muted hover:text-foreground"
               }`}
             >
               For Him
@@ -162,11 +162,11 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={`${activeTab}-${i}`}
-              className="service-card glass-card p-7 flex flex-col gap-4 group hover:border-crimson/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(154,42,42,0.15)]"
+              className="service-card glass-card p-7 flex flex-col items-center text-center gap-4 group hover:border-crimson/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(154,42,42,0.15)]"
             >
               <div className="text-3xl mb-1">{service.icon}</div>
               <h3
-                className="text-lg font-semibold text-white group-hover:text-gold transition-colors duration-300"
+                className="text-lg font-semibold text-foreground group-hover:text-gold transition-colors duration-300"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
                 {service.name}
@@ -174,12 +174,9 @@ export default function Services() {
               <p className="text-sm text-muted leading-relaxed flex-1">
                 {service.description}
               </p>
-              <div className="flex items-center justify-between mt-2 pt-4 border-t border-border-subtle">
-                <span className="text-crimson-light font-semibold text-sm">
+              <div className="flex flex-col items-center mt-2 pt-4 border-t border-border-subtle w-full">
+                <span className="text-crimson font-semibold text-sm">
                   {service.price}
-                </span>
-                <span className="w-8 h-8 rounded-full border border-border-light flex items-center justify-center text-muted group-hover:border-crimson group-hover:text-crimson transition-all duration-300">
-                  →
                 </span>
               </div>
             </div>

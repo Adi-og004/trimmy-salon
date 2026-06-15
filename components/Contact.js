@@ -141,7 +141,7 @@ export default function Contact() {
           {/* Form */}
           <div ref={formRef} className="glass-card p-8 md:p-10">
             <h3
-              className="text-xl font-semibold mb-6 text-white"
+              className="text-xl font-semibold mb-6 text-foreground"
               style={{ fontFamily: "var(--font-serif)" }}
             >
               Enquiry Form
@@ -208,7 +208,7 @@ export default function Contact() {
                     Select a service
                   </option>
                   {serviceOptions.map((opt) => (
-                    <option key={opt} value={opt} className="bg-[#161616]">
+                    <option key={opt} value={opt} className="bg-card text-foreground">
                       {opt}
                     </option>
                   ))}
@@ -257,26 +257,26 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="glass-card p-5 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl bg-crimson/15 flex items-center justify-center">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A2A2A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-crimson)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase tracking-wide">Location</p>
-                  <p className="text-sm text-white font-medium">Bhiwadi, Rajasthan</p>
+                  <p className="text-sm text-foreground font-medium">Bhiwadi, Rajasthan</p>
                 </div>
               </div>
               <div className="glass-card p-5 flex items-center gap-4">
                 <div className="w-11 h-11 rounded-xl bg-gold/15 flex items-center justify-center">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A880" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10" />
                     <path d="M12 6v6l4 2" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase tracking-wide">Hours</p>
-                  <p className="text-sm text-white font-medium">10 AM – 9 PM Daily</p>
+                  <p className="text-sm text-foreground font-medium">10 AM – 9 PM Daily</p>
                 </div>
               </div>
             </div>

@@ -138,7 +138,7 @@ export default function Portfolio() {
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
               {/* Text */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                 <span className="text-xs uppercase tracking-[0.2em] text-gold mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {item.category}
                 </span>
@@ -167,7 +167,7 @@ export default function Portfolio() {
                 backgroundImage: `radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 50%)`
               }} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-center">
                 <span className="text-xs uppercase tracking-[0.2em] text-gold mb-2 block">
                   {item.category}
                 </span>

@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #111111;
-  --bg-card: #161616;
-  --bg-card-hover: #1c1c1c;
-  --text-primary: #FFFFFF;
-  --text-secondary: #E0E0E0;
-  --text-muted: #888888;
-  --accent-crimson: #9A2A2A;
-  --accent-crimson-light: #b33a3a;
-  --accent-gold: #C5A880;
-  --accent-gold-light: #d4bc9a;
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-light: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(10, 10, 10, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --bg-primary: #FAF6EE;
+  --bg-secondary: #F3ECE0;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FDFCF7;
+  --text-primary: #2C241E;
+  --text-secondary: #5C4F46;
+  --text-muted: #9C8E84;
+  --accent-crimson: #8C2218;
+  --accent-crimson-light: #A4352A;
+  --accent-gold: #B89C72;
+  --accent-gold-light: #CDAF84;
+  --border-subtle: rgba(44, 36, 30, 0.08);
+  --border-light: rgba(44, 36, 30, 0.15);
+  --glass-bg: rgba(250, 246, 238, 0.8);
+  --glass-border: rgba(184, 156, 114, 0.25);
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -116,11 +116,12 @@ body {
 
 /* ===== GLASS CARD ===== */
 .glass-card {
-  background: rgba(22, 22, 22, 0.6);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(44, 36, 30, 0.03);
 }
 
 /* ===== BUTTON BASE ===== */

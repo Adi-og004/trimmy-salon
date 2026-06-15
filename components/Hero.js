@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,7 +12,6 @@ export default function Hero() {
   const subRef = useRef(null);
   const ctaRef = useRef(null);
   const overlayRef = useRef(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -80,60 +79,19 @@ export default function Hero() {
       ref={sectionRef}
       className="relative w-full h-screen min-h-[600px] overflow-hidden flex items-center justify-center"
     >
-      {/* Animated Background */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        {/* Video background with fallback */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          onCanPlay={() => setVideoLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            videoLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          aria-hidden="true"
-        >
-          <source
-            src="https://cdn.pixabay.com/video/2020/05/25/40130-424930032_large.mp4"
-            type="video/mp4"
-          />
-        </video>
-
-        {/* CSS Gradient Fallback — always visible, covered by video when loaded */}
-        <div
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            videoLoaded ? "opacity-0" : "opacity-100"
-          }`}
-          style={{
-            background: `
-              radial-gradient(ellipse at 20% 50%, rgba(154, 42, 42, 0.15) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 20%, rgba(197, 168, 128, 0.08) 0%, transparent 40%),
-              radial-gradient(ellipse at 50% 80%, rgba(20, 20, 40, 0.5) 0%, transparent 60%),
-              linear-gradient(180deg, #0A0A0A 0%, #111118 30%, #0d0d14 70%, #0A0A0A 100%)
-            `,
-          }}
+        <img
+          src="/images/salon-hero.png"
+          alt="Trimmy's Salon Luxury Interior"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-
-        {/* Subtle animated particles effect via CSS */}
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `
-            radial-gradient(1px 1px at 20% 30%, rgba(197,168,128,0.4), transparent),
-            radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.2), transparent),
-            radial-gradient(1px 1px at 60% 40%, rgba(197,168,128,0.3), transparent),
-            radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,0.15), transparent),
-            radial-gradient(1.5px 1.5px at 10% 80%, rgba(154,42,42,0.3), transparent),
-            radial-gradient(1px 1px at 90% 20%, rgba(197,168,128,0.25), transparent)
-          `,
-          backgroundSize: '200% 200%',
-          animation: 'shimmerBg 15s ease-in-out infinite alternate',
-        }} />
       </div>
 
-      {/* Dark Overlay */}
+      {/* Elegant Dark Overlay with fade into cream background at the bottom */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-[#0A0A0A]/95"
+        className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-[var(--bg-primary)]/95"
       />
 
       {/* Content */}

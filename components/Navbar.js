@@ -60,7 +60,7 @@ export default function Navbar() {
               style={{ fontFamily: "var(--font-serif)" }}
             >
               <span className="text-gold">T</span>
-              <span className="text-white">rimmy&apos;s</span>
+              <span className="text-foreground">rimmy&apos;s</span>
             </span>
           </a>
 
@@ -71,7 +71,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="relative text-sm font-medium text-muted hover:text-white transition-colors duration-300 group"
+                className="relative text-sm font-medium text-muted hover:text-foreground transition-colors duration-300 group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-crimson group-hover:w-full transition-all duration-300" />
@@ -94,17 +94,17 @@ export default function Navbar() {
             aria-label="Toggle navigation menu"
           >
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-300 ${
+              className={`w-6 h-[2px] bg-foreground transition-all duration-300 ${
                 mobileOpen ? "rotate-45 translate-y-[5px]" : ""
               }`}
             />
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-300 ${
+              className={`w-6 h-[2px] bg-foreground transition-all duration-300 ${
                 mobileOpen ? "opacity-0 scale-0" : ""
               }`}
             />
             <span
-              className={`w-6 h-[2px] bg-white transition-all duration-300 ${
+              className={`w-6 h-[2px] bg-foreground transition-all duration-300 ${
                 mobileOpen ? "-rotate-45 -translate-y-[5px]" : ""
               }`}
             />
