@@ -32,6 +32,21 @@ export async function POST(request) {
       );
     }
 
+    // Check for missing environment variables
+    const missingVars = [];
+    if (!process.env.GMAIL_USER) missingVars.push("GMAIL_USER");
+    if (!process.env.GMAIL_APP_PASSWORD) missingVars.push("GMAIL_APP_PASSWORD");
+    if (!process.env.OWNER_EMAIL) missingVars.push("OWNER_EMAIL");
+
+    if (missingVars.length > 0) {
+      const errorMsg = `Missing environment variables: ${missingVars.join(", ")}. Please set them in your Vercel Project Settings.`;
+      console.error(`[SMTP Config Error] ${errorMsg}`);
+      return NextResponse.json(
+        { error: errorMsg },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
